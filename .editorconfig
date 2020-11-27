@@ -1,0 +1,28 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+insert_final_newline = false
+max_line_length = 100
+tab_width = 2
+
+[*.java]
+indent_size = 4
+
+[{*.gant, *.gradle, *.groovy, *.gson, *.gy}]
+indent_size = 4
+tab_width = 4
+
+[{*.gradle.kts, *.kt, *.kts, *.main.kts}]
+indent_size = 4
+tab_width = 4
+
+[{*.mk, GNUmakefile, makefile}]
+tab_width = 4
+
+[{*.toml, Cargo.lock, Gopkg.lock, Pipfile}]
+indent_size = 4
+tab_width = 4
