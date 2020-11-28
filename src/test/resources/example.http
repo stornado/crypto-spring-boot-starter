@@ -1,0 +1,61 @@
+###
+GET {{server}}/hello/str?name=ryan
+Accept: text/plain
+
+###
+POST {{server}}/hello/str
+Accept: text/plain
+Content-Type: application/x-www-form-urlencoded
+
+name=ryan
+
+###
+POST {{server}}/hello/user
+Accept: application/json
+Content-Type: application/json
+
+{"name":"ryan","age":18}
+
+###
+GET {{server}}/crypto/str?name=ryan
+Accept: application/json
+
+###
+POST {{server}}/crypto/str
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+
+name=ryan
+
+###
+POST {{server}}/crypto/user
+Accept: application/json
+Content-Type: application/json
+
+{"name":"ryan","age":18}
+
+###
+POST {{server}}/crypto/encrypt/str
+Accept: application/json
+Content-Type: application/json
+
+{
+  "encrypt": "1e1FaIpuOAyTAWDp91vzYQ==",
+  "sign": "d917653383e1d7226e1af33ccf09f972",
+  "ts": 1606564308017,
+  "nc": "w4NE6S"
+}
+
+###
+POST {{server}}/crypto/encrypt/user
+Accept: application/json
+Content-Type: application/json
+
+{
+  "encrypt": "nQm15OAj01ZT/MtBuZkr/cFDODJ6z00ipKh9sxiKEnc=",
+  "sign": "b1895cd09f65f469b8eedfe3dbd7b1e7",
+  "ts": 1606564744239,
+  "nc": "qStOnk"
+}
+
+###
