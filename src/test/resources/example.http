@@ -41,9 +41,9 @@ Content-Type: application/json
 
 {
   "encrypt": "1e1FaIpuOAyTAWDp91vzYQ==",
-  "sign": "d917653383e1d7226e1af33ccf09f972",
-  "ts": 1606564308017,
-  "nc": "w4NE6S"
+  "sign": "64faa4f5e336da5d80aa8fcc90593a13",
+  "ts": 1606814829990,
+  "nc": "VksTUj"
 }
 
 ###
@@ -53,9 +53,9 @@ Content-Type: application/json
 
 {
   "encrypt": "nQm15OAj01ZT/MtBuZkr/cFDODJ6z00ipKh9sxiKEnc=",
-  "sign": "b1895cd09f65f469b8eedfe3dbd7b1e7",
-  "ts": 1606564744239,
-  "nc": "qStOnk"
+  "sign": "f941c698678a612a2e338c526fe68227",
+  "ts": 1606814687635,
+  "nc": "QTZ3va"
 }
 
 ###
