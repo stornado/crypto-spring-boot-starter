@@ -1,6 +1,7 @@
 package com.zxytech.crypto.starter.result;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -29,7 +30,7 @@ public class Result<T> {
     /**
      * 返回参数
      */
-//    @JsonIgnore
+    @JsonIgnore
     private T data;
     /**
      * 返回加密报文
