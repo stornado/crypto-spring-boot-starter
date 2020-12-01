@@ -19,6 +19,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.json.MappingJacksonInputMessage;
+import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.RequestBodyAdviceAdapter;
 
@@ -49,6 +50,13 @@ public class DecryptRequestBodyAdvice extends RequestBodyAdviceAdapter {
             || request.getTimestamp() < now - requestTimeout) {
             throw new RequestException("Request timeout! invalid ts");
         }
+        if (!DigestUtils.md5DigestAsHex(String
+            .format("ts=%d&nc=%s&encrypt=%s",
+                request.getTimestamp(), request.getNonce(), request.getEncrypt()).getBytes())
+            .equalsIgnoreCase(request.getSign())) {
+            throw new RequestException("Request Sign Err! invalid sign");
+        }
+
         return request;
     }
 
